@@ -4,6 +4,7 @@ export const theme = {
     red: '#FF0000',
     grey: '#f1f1f1',
     black: '#282828',
+    disable: '#ebebeb'
   },
   fonts: ['sans-serif", "Roboto'],
   fontSizes: {
