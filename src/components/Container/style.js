@@ -6,4 +6,6 @@ export const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 `

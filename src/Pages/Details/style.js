@@ -8,6 +8,10 @@ export const WrapperDetails = styled.div `
 export const Title = styled.h2 `
   font-size: 25px;
   margin-top: 30px;
+
+  @media(max-width: 768px){
+    font-size: 18px;
+  }
 `
 
 export const WrapperStatistics = styled.div `
@@ -18,6 +22,11 @@ export const WrapperStatistics = styled.div `
 
   & svg{
     margin-right:5px;
+    margin-top: -6px;
+  }
+
+  @media(max-width: 768px){
+    justify-content: space-between;
   }
 `
 

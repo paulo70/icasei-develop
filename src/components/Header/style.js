@@ -29,6 +29,10 @@ export const HeaderUser = styled.h2`
   align-items: center;
   color: ${(props) => props.theme.colors.black};
   margin-right: 10px;
+
+  @media(max-width: 768px){
+    margin-left: 10px;
+  }
 `
 export const UserLogout = styled.span`
   text-decoration: underline;

@@ -6,6 +6,10 @@ export const DetailsWrapper = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 10px;
+
+  @media(max-width: 768px){
+    justify-content: center;
+  }
 `
 export const CardWrapper = styled.div`
   width: 270px;

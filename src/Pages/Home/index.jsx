@@ -16,7 +16,7 @@ const Home = () => {
   }, [value, data])
 
   return (
-    <>
+    <section>
       <Search />
       <DetailsWrapper>
         {videos?.map((video) => (
@@ -29,7 +29,7 @@ const Home = () => {
           />
         ))}
       </DetailsWrapper>
-    </>
+    </section>
   )
 }
 

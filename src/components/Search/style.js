@@ -28,6 +28,10 @@ export const Form = styled.form`
       -webkit-animation-fill-mode: both;
       animation-fill-mode: both;
     `};
+
+    @media(max-width: 768px){
+      flex-direction: column;
+    }
 `
 
 export const Input = styled.input`
@@ -37,7 +41,7 @@ export const Input = styled.input`
   width: 50%;
   padding: 10px;
 
-  @media(width: 768px){
+  @media(max-width: 768px){
     width: 100%;
   }
 `
@@ -64,7 +68,10 @@ export const Button = styled.button`
   }
 
   @media(max-width: 768px){
-    width: 15%;
     font-size: 14px;
+    
+    width: 100%;
+    margin-left: 0;
+    margin-top:10px;
   }
 `

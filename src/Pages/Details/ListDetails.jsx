@@ -10,7 +10,7 @@ const ListDetails = ({ title, id, likeCount, viewCount, description }) => {
           <iframe title={ `${title}` }
             id="ytplayer"
             type="text/html"
-            width="640"
+            width="100%"
             height="360"
             src={ `http://www.youtube.com/embed/${id}` }
             frameborder="0" />
