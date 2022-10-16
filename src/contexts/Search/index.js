@@ -22,7 +22,6 @@ export function useSearchContext() {
     e.preventDefault()
     setAnimate(true)
     const response = await getSearchVideos(value)
-    console.log(response.data.items, 'many times')
     setAnimate(false)
     return setData(response.data.items)
   }

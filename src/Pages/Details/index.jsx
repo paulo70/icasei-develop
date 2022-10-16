@@ -23,7 +23,6 @@ const Details = () => {
     fetchData()
   }, [ params.id ])
 
-  console.log(data, 'data')
   return (
     <>
       {
