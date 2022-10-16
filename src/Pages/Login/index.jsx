@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import { FormWrapper, Form, Title, SubTitle, Label, Input, Button, MessageError } from './style'
 
-import { loginUser } from '../../services/request/login'
+import { loginUser } from '../../services/requests'
 import { UserContext } from '../../contexts/User'
 
 const Login = ({ setToken }) => {
