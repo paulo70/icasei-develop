@@ -16,21 +16,21 @@ function App() {
 
   return (
     <UserContextProvider>
-      <Header />
-      <Container>
-        { !token ? (
-          <Login setToken={ setToken } />
-        ) : (
-          <SearchContextProvider>
-            <BrowserRouter>
+      <BrowserRouter>
+        <Header />
+        <Container>
+          { !token ? (
+            <Login setToken={ setToken } />
+          ) : (
+            <SearchContextProvider>
               <Routes>
                 <Route path='/' element={ <Home /> }></Route>
-                <Route path='/details/:id' element={<Details/>}></Route>
+                <Route path='/details/:id' element={ <Details /> }></Route>
               </Routes>
-            </BrowserRouter>
-          </SearchContextProvider>
-        ) }
-      </Container>
+            </SearchContextProvider>
+          ) }
+        </Container>
+      </BrowserRouter>
     </UserContextProvider>
   )
 }

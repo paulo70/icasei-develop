@@ -8,7 +8,7 @@ export const DetailsWrapper = styled.div`
   margin-top: 10px;
 `
 export const CardWrapper = styled.div`
-  width: 250px;
+  width: 270px;
   margin-top: 40px;
 
   & button{
@@ -43,5 +43,5 @@ export const Title = styled.h3`
 
 export const Paragraph = styled.p`
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 15px;
 `

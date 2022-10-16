@@ -36,6 +36,10 @@ export const Input = styled.input`
   border-radius: 10px;
   width: 50%;
   padding: 10px;
+
+  @media(width: 768px){
+    width: 100%;
+  }
 `
 export const Button = styled.button`
   border: none;
@@ -46,4 +50,21 @@ export const Button = styled.button`
   padding: 10px;
   width: 10%;
   margin-left: 10px;
+
+  &:disabled{
+    background: ${(props) => props.theme.colors.disable};
+  }
+
+  &:hover{
+    background: ${(props) => props.theme.colors.sun};
+  }
+
+  &:active{
+    background: ${(props) => props.theme.colors.ranger};
+  }
+
+  @media(max-width: 768px){
+    width: 15%;
+    font-size: 14px;
+  }
 `

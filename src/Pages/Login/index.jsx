@@ -23,10 +23,12 @@ const Login = ({ setToken }) => {
         <Title>
           YouTube <SubTitle>videos</SubTitle>
         </Title>
-        <Label>Nome</Label>
-        <Input type="text" value={ name } onChange={ (e) => setName(e.target.value) } />
-        <Label>Email</Label>
-        <Input type="text" value={ email } onChange={ handleChange } />
+        <Label>Nome
+          <Input type="text" value={ name } onChange={ (e) => setName(e.target.value) } />
+        </Label>
+        <Label>Email
+          <Input type="text" value={ email } onChange={ handleChange } />
+        </Label>
         { error && <MessageError>{ error }</MessageError> }
         <Button type="submit" disabled={ name.length < 4 || error }>Entrar</Button>
       </Form>

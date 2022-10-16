@@ -15,13 +15,17 @@ export const Form = styled.form`
   border-radius: 10px;
   border: 1px solid ${(props) => props.theme.colors.grey};
   box-shadow: -4px 1px 12px -10px rgba(0, 0, 0, 0.72);
-  align-items: center;
+  align-items:center;
 `
 export const Title = styled.h1`
   color: ${(props) => props.theme.colors.black};
   font-size: 40px;
   
   margin-left: 10px;
+
+  @media(max-width: 768px){
+    font-size: 20px;
+  }
 `
 export const SubTitle = styled.span`
   color: ${(props) => props.theme.colors.red};
@@ -35,6 +39,10 @@ export const Label = styled.label`
  
   margin-top: 10px;
   margin-bottom: 5px;
+
+  @media(max-width: 768px){
+    font-size:13px;
+  }
 `
 
 export const Input = styled.input`
@@ -42,7 +50,7 @@ export const Input = styled.input`
   border: 2px solid ${(props) => props.theme.colors.grey};
   border-radius: 10px;
   
-  width: 50%;
+  width: 100%;
   padding: 10px;
 `
 export const Button = styled.button`

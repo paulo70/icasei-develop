@@ -3,9 +3,17 @@ import { ContentHeader, HeaderTitle, HeaderSubTitle, HeaderUser, UserLogout } fr
 import PersonIcon from '@mui/icons-material/Person'
 
 import { UserContext } from '../../contexts/User'
+import { useNavigate } from 'react-router'
 
 const Header = () => {
   const { name, email } = useContext(UserContext)
+
+  const navigate = useNavigate()
+
+  const handleLogout = () => {
+    localStorage.clear()
+    navigate(-1)
+  }
 
   return (
     <header>
@@ -15,7 +23,7 @@ const Header = () => {
         </HeaderTitle>
         <HeaderUser>
           <PersonIcon /> nome: {name} || email: {email}
-          <UserLogout href="">Sair</UserLogout>
+          <UserLogout onClick={handleLogout}>Sair</UserLogout>
         </HeaderUser>
       </ContentHeader>
     </header>

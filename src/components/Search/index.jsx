@@ -6,7 +6,7 @@ const Search = () => {
   return (
     <Form onSubmit={handleSubmitSearch} anime={animate}>
       <Input type="text" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Pesquisar" />
-      <Button type="submit">Buscar</Button>
+      <Button type="submit" disabled={value.length < 1}>Buscar</Button>
     </Form>
   )
 }

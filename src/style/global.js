@@ -19,7 +19,7 @@ export default createGlobalStyle`
     }
 
     body, input, button {
-      font-family: 'Sugo Pro Display Trial', sans-serif;                      
+      font-family: 'Sveningsson', sans-serif;                    
     }
 
     html, body {

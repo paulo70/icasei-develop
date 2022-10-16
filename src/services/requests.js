@@ -5,7 +5,7 @@ const key = process.env.REACT_APP_KEY
 export async function getSearchVideos(value) {
   return await URL.get(`search?part=id,snippet&q=${value}&key=${key}`, {
     params: {
-      maxResults: 4,
+      maxResults: 8,
     },
   }).then((response) => response)
 }

@@ -13,6 +13,7 @@ export const Cover = styled.div`
 
   img {
     width: 100%;
+    height: 128px;
     object-fit: cover;
   }
 `
