@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
+
 import Search from '../../components/Search'
-import ListDetails from './ListDetails'
+import VideoList from './HomeList'
+
 import { useSearchContext } from '../../contexts/Search'
 import { DetailsWrapper } from './style'
 
@@ -18,11 +20,12 @@ const Home = () => {
       <Search />
       <DetailsWrapper>
         {videos?.map((video) => (
-          <ListDetails
+          <VideoList
             title={video.snippet.title}
             description={video.snippet.description}
             thumbnails={video.snippet.thumbnails.medium.url}
             key={video.id.videoId}
+            id={video.id.videoId}
           />
         ))}
       </DetailsWrapper>

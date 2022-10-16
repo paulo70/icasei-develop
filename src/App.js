@@ -5,6 +5,7 @@ import Header from './components/Header'
 
 import Home from './Pages/Home'
 import Login from './Pages/Login'
+import Details from './Pages/Details'
 
 import UserContextProvider from './contexts/User'
 import SearchContextProvider from './contexts/Search'
@@ -24,6 +25,7 @@ function App() {
             <BrowserRouter>
               <Routes>
                 <Route path='/' element={ <Home /> }></Route>
+                <Route path='/details/:id' element={<Details/>}></Route>
               </Routes>
             </BrowserRouter>
           </SearchContextProvider>
