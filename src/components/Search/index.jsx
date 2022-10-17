@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useSearchContext } from '../../contexts/Search'
 import { Input, Form, Button } from './style'
 const Search = () => {
@@ -11,4 +11,4 @@ const Search = () => {
   )
 }
 
-export default Search
+export default memo(Search) 

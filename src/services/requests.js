@@ -2,18 +2,27 @@ import URL from './api'
 
 const key = process.env.REACT_APP_KEY
 
-export async function getSearchVideos(value) {
-  return await URL.get(`search?part=id,snippet&q=${value}&key=${key}`, {
-    params: {
-      maxResults: 8,
-    },
-  }).then((response) => response)
+// REQUEST TO GET VIDEOS
+export async function getSearchVideos(
+  value,
+  nextPageToken,
+  limit = 50,
+  type = 'video',
+  part = 'snippet') {
+
+  const params = `search?part=${part}&q=${value}&key=${key}&maxResults=${limit}&type=${type}` +
+    (nextPageToken ? `&pageToken=${nextPageToken}` : "")
+
+  return await URL.get(params).then((response) => response)
 }
 
+// REQUEST TO GET DETAILS VIDEOS
 export async function getDetailsVideos(id) {
   return await URL.get(`videos?id=${id}&part=snippet,statistics&key=${key}`).then((response) => response)
 }
 
+
+// POST TO RECEIVE TOKEN
 export async function loginUser(credentials) {
   return fetch('http://localhost:8080/login', {
     method: 'POST',
