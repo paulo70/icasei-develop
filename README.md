@@ -28,6 +28,9 @@ Now you should be seeing the token return. If you did all steps the application 
 ### src -------------------|
   
   ### `- assets`
+          style
+            - theme
+            - global
   ### `- components`
           - Card
           - Container
