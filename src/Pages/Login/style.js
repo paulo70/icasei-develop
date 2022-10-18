@@ -16,6 +16,10 @@ export const Form = styled.form`
   border: 1px solid ${(props) => props.theme.colors.grey};
   box-shadow: -4px 1px 12px -10px rgba(0, 0, 0, 0.72);
   align-items:center;
+
+  @media(max-width: 768px){
+    width:100%;
+  }
 `
 export const Title = styled.h1`
   color: ${(props) => props.theme.colors.black};
