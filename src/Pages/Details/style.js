@@ -65,3 +65,25 @@ export const Paragraph = styled.p `
   width: 100%;
   white-space: pre-wrap;
 `
+
+export const BackButton = styled.span `
+  display: inline-flex;
+  margin-top: 30px;
+
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.red};
+
+  &:hover{
+    color:${(props) => props.theme.colors.sun};
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  & svg{
+    font-size: 18px;
+    margin-top:-2px;
+  }
+ 
+`

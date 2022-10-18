@@ -9,21 +9,21 @@ import { useSearchContext } from '../../contexts/Search'
 import { DetailsWrapper } from './style'
 
 const Home = () => {
-  const { data, value, loading, loadMore} = useSearchContext()
+  const { data, value, loading, loadMore } = useSearchContext()
   const [ videos, setVideos ] = useState([])
   console.log(videos, 'data')
 
   useEffect(() => {
     setVideos(data)
-  }, [ value, data])
+  }, [ value, data ])
 
   return (
     <section>
       <Search />
       { loading && <Loading /> }
       <DetailsWrapper>
-        { videos?.map((video) => (
-          <div key={ `${video.id.videoId || ''}` }>
+        { videos?.map((video, index) => (
+          <div key={index}>
             <VideoList
               title={ video.snippet.title }
               description={ video.snippet.description }
@@ -34,7 +34,9 @@ const Home = () => {
           </div>
         )) }
       </DetailsWrapper>
-      <Button onClick={ () => loadMore() }/>
+      { data.length > 0 && (
+        <Button onClick={ () => loadMore() } />
+      ) }
     </section>
   )
 }

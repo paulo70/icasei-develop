@@ -57,14 +57,12 @@ export function useSearchContext() {
 
     const response = await getSearchVideos(value)
     setAnimate(false)
-    console.log(response.data?.items, 'items')
-    console.log(response.data.nextPageToken, 'quero ver')
     setData(response.data?.items)
     setNextPageToken(response.data.nextPageToken)
     setLoading(false)
   }
 
-  const loadMore = async () => {
+  const loadMore = async (id) => {
     if (hasMore) {
       const response = await getSearchVideos(value, nextPageToken)
       setData((prevData) => [
