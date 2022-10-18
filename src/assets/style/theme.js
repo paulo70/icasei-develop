@@ -8,7 +8,8 @@ export const theme = {
     black: '#282828',
     moon: '#444242',
     dark: '#000000',
-    disable: '#ebebeb'
+    disable: '#ebebeb',
+    silver: '#ccc'
   },
   fonts: ['sans-serif", "Roboto'],
   fontSizes: {

@@ -2,7 +2,7 @@ import React, { memo, useEffect, useState } from 'react'
 
 import Search from '../../components/Search'
 import Loading from '../../components/Loading'
-import Button from '../../components/LoadMore'
+import Button from '../../components/Button'
 import VideoList from './HomeList'
 
 import { useSearchContext } from '../../contexts/Search'
@@ -11,7 +11,6 @@ import { DetailsWrapper } from './style'
 const Home = () => {
   const { data, value, loading, loadMore } = useSearchContext()
   const [ videos, setVideos ] = useState([])
-  console.log(videos, 'data')
 
   useEffect(() => {
     setVideos(data)

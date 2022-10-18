@@ -4,12 +4,15 @@ import { FormWrapper, Form, Title, SubTitle, Label, Input, Button, MessageError 
 
 import { loginUser } from '../../services/requests'
 import { UserContext } from '../../contexts/User'
+import { useNavigate } from 'react-router-dom'
 
 const Login = ({ setToken }) => {
   const { name, setName, email, handleChange, error } = useContext(UserContext)
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    navigate(0)
     const token = await loginUser({
       name,
       email,

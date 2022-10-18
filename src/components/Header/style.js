@@ -37,16 +37,16 @@ export const HeaderUser = styled.h2`
 export const UserLogout = styled.span`
   text-decoration: underline;
   font-size: 12px;
-  color: ${(props) => props.theme.colors.black};
+  color: ${(props) => props.theme.colors.red};
   cursor: pointer;
 
   margin: 0 10px;
 
   &:hover{
-    color: ${(props) => props.theme.colors.moon};
+    color: ${(props) => props.theme.colors.sun};
   }
 
   &:active{
-    color: ${(props) => props.theme.colors.black};
+    color: ${(props) => props.theme.colors.ranger};
   }
 `

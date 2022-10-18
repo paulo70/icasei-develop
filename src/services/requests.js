@@ -24,6 +24,7 @@ export async function getDetailsVideos(id) {
 
 // POST TO RECEIVE TOKEN
 export async function loginUser(credentials) {
+  localStorage.setItem('user', JSON.stringify(credentials))
   return fetch('http://localhost:8080/login', {
     method: 'POST',
     headers: {
