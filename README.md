@@ -4,7 +4,7 @@ This project was used React framework, styled-components and Node to the backend
 
 ## Instructions
 
-After you clone this repository in the project directory, you can run:
+After you clone [git@github.com:paulo70/icasei-develop.git] this repository in the project directory, you can run:
 
 ### `npm install`
 
