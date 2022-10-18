@@ -38,6 +38,7 @@ const Details = () => {
       {
         data?.map(item => (
           <ListDetails
+            key={item.id}
             title={ item.snippet.title }
             id={ item.id }
             likeCount={ item.statistics.likeCount }

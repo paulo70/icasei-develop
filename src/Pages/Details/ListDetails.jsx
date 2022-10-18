@@ -13,7 +13,7 @@ const ListDetails = ({ title, id, likeCount, viewCount, description }) => {
             width="100%"
             height="360"
             src={ `http://www.youtube.com/embed/${id}` }
-            frameborder="0" />
+            frameBorder="0" />
         </BoxVideos>
         <WrapperStatistics>
           <Like><ThumbUpIcon /> { likeCount }</Like>
